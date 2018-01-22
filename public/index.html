@@ -11,46 +11,49 @@
     <h1>Firebase TEST</h1>
   </header>
   <main>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <form data-post="form">
-          <div class="form-group">
-            <label for="body">Treść</label>
-            <input id="body" name="body" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="author">Autor</label>
-            <input id="author" name="author" class="form-control">
-          </div>
-          <div class="form-group">
-            <div class="radio">
-              <label>
-                <input type="radio" name="title" value="tribute" checked="true">  Życzenia
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="title" value="query">  Zapytanie
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="title" value="message">  Wiadomość
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-default">Wyślij</button>
-            <button type="reset" class="btn btn-default">Resetuj</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <section>
+    <section class="mt-3 p-3 border">
       <div class="panel panel-default">
         <div class="panel-body">
-          <h4>Lista postow</h4>
-          <div data-posts="postsList"></div>
+          <h2 class="primary-text">Wiadomość </h2>
+          <form data-post="form">
+            <div class="form-group">
+              <label for="body">Treść</label>
+              <input id="body" name="body" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="author">Autor</label>
+              <input id="author" name="author" class="form-control">
+            </div>
+            <div class="form-group">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="title" value="tribute" checked="true">  Życzenia
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="title" value="query">  Zapytanie
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="title" value="message">  Wiadomość
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-default">Wyślij</button>
+              <button type="reset" class="btn btn-default">Resetuj</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="mt-3 p-3 border">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Lista postów</h4>
+          <div data-list-post="list"></div>
         </div>
       </div>
     </section><!-- Import and configure the Firebase SDK -->
@@ -64,6 +67,7 @@
   <script src="/__/firebase/3.9.0/firebase-auth.js"></script>
   <script src="/__/firebase/3.9.0/firebase-database.js"></script>
   <script src="/__/firebase/init.js"></script>
-  <script src="./js/posts.js"></script>
+  <script src="./js/list-post.js"></script>
+  <script src="./js/post.js"></script>
   <script src="./js/main.js"></script>
 </body>

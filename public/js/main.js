@@ -1,12 +1,15 @@
 "use strict";
 
 (function (window) {
-  var FORM = '[data-post="form"]';
-  var Aplikacja = window.App;
-  var FormHandler = Aplikacja.FormHandler;
+  var FORM = '[data-post = "form"]';
+  var LIST = '[data-list-post = "list"]';
+  var App = window.App;
+  var database;
+  var FormHandler = App.FormHandler;
+  var ListHandler = App.ListHandler;
   var formHandler = new FormHandler(FORM);
+  var listHandler = new ListHandler(LIST);
   formHandler.addListener(save);
-  console.log(formHandler);
 
   $(document).ready(function () {
     var config = {
@@ -17,35 +20,27 @@
       storageBucket: "kratka-95546340.appspot.com",
       messagingSenderId: "467575575173"
     };
+    console.log("START");
     if (!firebase.apps.length) {
       firebase.initializeApp(config);
-      database: firebase.database();
+      database = firebase.database();
     }
+    read();
   });
 
   function save(data) {
     var newPostKey = firebase.database().ref().child('posts').push().key;
     var updates = {};
-    updates['/posts/' + newPostKey] = data;
-    firebase.database().ref().update(updates);
-    console.log("SEND");
+    if (validate(data)){
+      updates['/posts/' + newPostKey] = data;
+      firebase.database().ref().update(updates);
+      console.log("SEND");
+      read();
+    }
   }
 
-  /*
-  var postData = {
-    author: "CEZ",
-    body: "Monia is the best",
-    title: "tribute"
-    };
-    var newPostKey = firebase.database().ref().child('posts').push().key;
-    var updates = {};
-    updates['/posts/' + newPostKey] = postData;
-    firebase.database().ref().update(updates);
-    console.log("SEND");
-    */
-
   function read() {
-    console.log("READ AND SUMA");
+    console.log("READ");
     var query = firebase.database().ref('posts').orderByChild('author');
     query.once("value").then(function (snapshot) {
       snapshot.forEach(renderSingleSnapshot);
@@ -54,8 +49,12 @@
     });
   }
 
+  function validate(post){
+    return post.body.lenght === 0 || post.author.length === 0 ? false:true;
+  }
+
   function renderSingleSnapshot(postref) {
-    var post = postref.val();
-    console.log(post.body + " " + post.author);
+    console.log(postref.val() + " "+ postref.key);
+    listHandler.addRow(postref.val(), postref.key);
   }
 })(window);

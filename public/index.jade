@@ -9,36 +9,38 @@ body.container
   header
     h1 Firebase TEST
   main
-    .panel.panel-default
-      .panel-body
-        form(data-post="form")
-          .form-group
-            label(for="body") Treść
-            input#body.form-control(name="body")
-          .form-group
-            label(for="author") Autor
-            input#author.form-control(name="author")
-          .form-group
-            .radio
-              label
-                input(type="radio" name="title" value="tribute" checked="true")
-                |   Życzenia
-            .radio
-              label
-                input(type="radio" name="title" value="query")
-                |   Zapytanie
-            .radio
-              label
-                input(type="radio" name="title" value="message")
-                |   Wiadomość
-          .form-group
-            button.btn.btn-default(type="submit") Wyślij
-            button.btn.btn-default(type="reset") Resetuj
-    section
+    section.mt-3.p-3.border
       .panel.panel-default
         .panel-body
-          h4 Lista postow
-          div(data-posts="postsList")
+          h2.primary-text Wiadomość 
+          form(data-post="form")
+            .form-group
+              label(for="body") Treść
+              input#body.form-control(name="body")
+            .form-group
+              label(for="author") Autor
+              input#author.form-control(name="author")
+            .form-group
+              .radio
+                label
+                  input(type="radio" name="title" value="tribute" checked="true")
+                  |   Życzenia
+              .radio
+                label
+                  input(type="radio" name="title" value="query")
+                  |   Zapytanie
+              .radio
+                label
+                  input(type="radio" name="title" value="message")
+                  |   Wiadomość
+            .form-group
+              button.btn.btn-default(type="submit") Wyślij
+              button.btn.btn-default(type="reset") Resetuj
+    section.mt-3.p-3.border
+      .panel.panel-default
+        .panel-body
+          h4 Lista postów
+          div(data-list-post="list")
     <!-- Import and configure the Firebase SDK -->
     <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
     <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
@@ -49,6 +51,7 @@ body.container
   script(src="/__/firebase/3.9.0/firebase-auth.js")
   script(src="/__/firebase/3.9.0/firebase-database.js")
   script(src="/__/firebase/init.js")
-  script(src="./js/posts.js")
+  script(src="./js/list-post.js")
+  script(src="./js/post.js")
   script(src="./js/main.js")
     

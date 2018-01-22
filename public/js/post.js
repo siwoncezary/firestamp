@@ -1,8 +1,8 @@
-"use strict";
-
 (function (window) {
+  "use strict";
   var App = window.App || {};
   var $ = window.jQuery;
+
   function FormHandler(selector) {
     if (!selector) {
       throw new Error("Brak selektora!");
@@ -21,6 +21,8 @@
         data[element.name] = element.value;
       });
       fn(data);
+      this.reset();
+      this.elements[0].focus();
     });
   };
   App.FormHandler = FormHandler;
