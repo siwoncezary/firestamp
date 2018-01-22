@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Stamp - Redakcja Szaradziarska</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+</html>
+<body class="container">
+  <header>
+    <h1>Firebase TEST</h1>
+  </header>
+  <main>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form data-post="form">
+          <div class="form-group">
+            <label for="body">Treść</label>
+            <input id="body" name="body" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="author">Autor</label>
+            <input id="author" name="author" class="form-control">
+          </div>
+          <div class="form-group">
+            <div class="radio">
+              <label>
+                <input type="radio" name="title" value="tribute" checked="true">  Życzenia
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="title" value="query">  Zapytanie
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="title" value="message">  Wiadomość
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-default">Wyślij</button>
+            <button type="reset" class="btn btn-default">Resetuj</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Lista postow</h4>
+          <div data-posts="postsList"></div>
+        </div>
+      </div>
+    </section><!-- Import and configure the Firebase SDK -->
+    <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+    <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+  </main>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="/__/firebase/3.9.0/firebase-app.js"></script>
+  <script src="/__/firebase/3.9.0/firebase-auth.js"></script>
+  <script src="/__/firebase/3.9.0/firebase-database.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="./js/posts.js"></script>
+  <script src="./js/main.js"></script>
+</body>

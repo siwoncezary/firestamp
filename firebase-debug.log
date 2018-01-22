@@ -1,0 +1,82 @@
+[debug] [2018-01-21T19:42:18.031Z] ----------------------------------------------------------------------
+[debug] [2018-01-21T19:42:18.034Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\cs\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-21T19:42:18.034Z] CLI Version:   3.16.0
+[debug] [2018-01-21T19:42:18.034Z] Platform:      win32
+[debug] [2018-01-21T19:42:18.034Z] Node Version:  v6.10.2
+[debug] [2018-01-21T19:42:18.035Z] Time:          Sun Jan 21 2018 20:42:18 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-21T19:42:18.035Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-21T19:42:18.047Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-21T19:42:18.047Z] > authorizing via signed-in user
+[debug] [2018-01-21T19:42:18.051Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-21T19:42:18.051Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/Fn39sLS0Y91HoSFGK83Tqi_ylnxF-N7ILdVbfXsw8WTgwjzuUFaD7zl65fq7_YC3',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jan 21 2018 20:42:18 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-21T19:42:18.296Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-21T19:42:18.307Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/kratka-95546340  
+  
+ Sun Jan 21 2018 20:42:18 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-21T19:42:19.908Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-21T19:42:19.909Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/kratka-95546340/tokens  
+  
+ Sun Jan 21 2018 20:42:19 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-21T19:42:20.610Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\cs\Documents\Projekty\firestamp'...
+[info] 
+[debug] [2018-01-21T19:42:20.617Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/kratka-95546340  
+  
+ Sun Jan 21 2018 20:42:20 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-21T19:42:22.045Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-21T19:42:22.045Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/467575575173/clients/_:getWebAppConfig  
+  
+ Sun Jan 21 2018 20:42:22 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-21T19:42:22.852Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-01-22T09:02:20.993Z] ----------------------------------------------------------------------
+[debug] [2018-01-22T09:02:20.997Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\cs\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-22T09:02:20.997Z] CLI Version:   3.16.0
+[debug] [2018-01-22T09:02:20.997Z] Platform:      win32
+[debug] [2018-01-22T09:02:20.997Z] Node Version:  v6.10.2
+[debug] [2018-01-22T09:02:20.998Z] Time:          Mon Jan 22 2018 10:02:20 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-22T09:02:20.998Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-22T09:02:21.014Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-22T09:02:21.014Z] > authorizing via signed-in user
+[debug] [2018-01-22T09:02:21.016Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-22T09:02:21.016Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/Fn39sLS0Y91HoSFGK83Tqi_ylnxF-N7ILdVbfXsw8WTgwjzuUFaD7zl65fq7_YC3',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Jan 22 2018 10:02:21 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-22T09:02:21.244Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-22T09:02:21.260Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/kratka-95546340  
+  
+ Mon Jan 22 2018 10:02:21 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-22T09:02:22.336Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-22T09:02:22.337Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/kratka-95546340/tokens  
+  
+ Mon Jan 22 2018 10:02:22 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-22T09:02:23.052Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\cs\Documents\Projekty\firestamp'...
+[info] 
+[debug] [2018-01-22T09:02:23.052Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/kratka-95546340  
+  
+ Mon Jan 22 2018 10:02:23 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-22T09:02:24.433Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-22T09:02:24.434Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/467575575173/clients/_:getWebAppConfig  
+  
+ Mon Jan 22 2018 10:02:24 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2018-01-22T09:02:25.710Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

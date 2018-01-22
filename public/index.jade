@@ -1,0 +1,54 @@
+//output:index.html
+doctype
+html(lang='pl')
+  head
+    meta(charset='utf-8')
+    title Stamp - Redakcja Szaradziarska
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css")
+body.container
+  header
+    h1 Firebase TEST
+  main
+    .panel.panel-default
+      .panel-body
+        form(data-post="form")
+          .form-group
+            label(for="body") Treść
+            input#body.form-control(name="body")
+          .form-group
+            label(for="author") Autor
+            input#author.form-control(name="author")
+          .form-group
+            .radio
+              label
+                input(type="radio" name="title" value="tribute" checked="true")
+                |   Życzenia
+            .radio
+              label
+                input(type="radio" name="title" value="query")
+                |   Zapytanie
+            .radio
+              label
+                input(type="radio" name="title" value="message")
+                |   Wiadomość
+          .form-group
+            button.btn.btn-default(type="submit") Wyślij
+            button.btn.btn-default(type="reset") Resetuj
+    section
+      .panel.panel-default
+        .panel-body
+          h4 Lista postow
+          div(data-posts="postsList")
+    <!-- Import and configure the Firebase SDK -->
+    <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+    <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+  script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+  script(src="/__/firebase/3.9.0/firebase-app.js")
+  script(src="/__/firebase/3.9.0/firebase-auth.js")
+  script(src="/__/firebase/3.9.0/firebase-database.js")
+  script(src="/__/firebase/init.js")
+  script(src="./js/posts.js")
+  script(src="./js/main.js")
+    
