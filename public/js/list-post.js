@@ -35,6 +35,32 @@
     this.$element.append(row.$element);
   }
 
+  ListHandler.prototype.clear = function(){
+    this.$element.empty();
+  }
+
+  ListHandler.prototype.getChecked = function () {
+    var list=[];
+    this.$element.children().children().children().each(function(){
+      var item = $(this)[0];
+      if (item.checked)
+        list.push(item.value);
+    });
+    return list;
+  };
+
+  ListHandler.prototype.checkAll = function(){
+    this.$element.children().children().children().each(function(){
+      $(this)[0].checked = true;
+    });
+  }
+
+  ListHandler.prototype.uncheckAll = function(){
+    this.$element.children().children().children().each(function(){
+      $(this)[0].checked = false;
+    });
+  }
+
   App.ListHandler = ListHandler;
   window.App = App;
 })(window);

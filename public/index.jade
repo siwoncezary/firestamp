@@ -5,9 +5,13 @@ html(lang='pl')
     meta(charset='utf-8')
     title Stamp - Redakcja Szaradziarska
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css")
+    script(src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js")
+    link(type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css")
 body.container
   header
     h1 Firebase TEST
+    h2#user anonimowy
+    button#logout.btn.btn-default(value = 'login') Wyloguj
   main
     section.mt-3.p-3.border
       .panel.panel-default
@@ -39,8 +43,12 @@ body.container
     section.mt-3.p-3.border
       .panel.panel-default
         .panel-body
-          h4 Lista postów
+          h2 Posty
+          .form-group
+            button#delete.btn.btn-default Usuń zaznaczone
+            button#check-all.btn.btn-primary(type="button" value='on') Zaznacz wszystkie
           div(data-list-post="list")
+          
     <!-- Import and configure the Firebase SDK -->
     <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
     <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
